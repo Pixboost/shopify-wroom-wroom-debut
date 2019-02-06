@@ -3,7 +3,7 @@
      data-bgset="{% include 'bgset', image: section.settings.image %}"
      data-sizes="auto"
      data-parent-fit="cover"
-     style="background-position: {{ section.settings.alignment }}; background-image: url('{{ section.settings.image | img_url: '300x300' }});"
+     style="background-position: {{ section.settings.alignment }};"
      {% endif %}>
   {% if section.settings.image == blank %}
     <div class="placeholder-background">

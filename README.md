@@ -9,4 +9,7 @@ I found that using MS Visual Code with this [plugin](https://github.com/GingerBe
 
 # Run
 
-To preview changes: `theme open --env=development`
+In two terminals:
+
+* To preview changes: `theme open --env=development`
+* To watch and upload changes: `theme watch`
