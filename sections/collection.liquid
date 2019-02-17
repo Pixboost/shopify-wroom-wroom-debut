@@ -7,6 +7,8 @@
 
   {%- assign collection = collections[section.settings.collection] -%}
 
+  {%- assign max_width = 1120 | divided_by: section.settings.grid | minus: 30 -%}
+
   {% case section.settings.grid %}
     {% when 2 %}
       {%- assign max_height = 530 -%}
@@ -27,7 +29,7 @@
   <ul class="grid grid--uniform grid--view-items">
     {% for product in collection.products limit: product_limit %}
       <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
-        {% include 'product-card-grid', max_height: max_height %}
+        {% include 'product-card-grid', max_height: max_height, max_width: max_width %}
       </li>
     {% else %}
 

@@ -142,6 +142,8 @@
 
   <div class="page-width" id="Collection">
     {% if section.settings.layout == 'grid' %}
+      {%- assign max_width = 1120 | divided_by: section.settings.grid | minus: 30 -%}
+
       {% case section.settings.grid %}
       {% when 2 %}
         {%- assign grid_item_width = 'medium-up--one-half' -%}
@@ -156,7 +158,7 @@
       <ul class="grid grid--uniform{% if collection.products_count > 0 %} grid--view-items{% endif %}">
         {% for product in collection.products %}
           <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
-            {% include 'product-card-grid', max_height: max_height %}
+            {% include 'product-card-grid', max_height: max_height, max_width: max_width %}
           </li>
         {% else %}
           {% comment %}

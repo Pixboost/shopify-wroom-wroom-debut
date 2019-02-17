@@ -9,21 +9,27 @@
     {% for block in section.blocks %}
       {% case block.settings.width %}
         {% when '25%' %}
+          {%- assign max_width = 250 -%}
           {%- assign max_height = 250 -%}
           {%- assign block_width = 'small--one-half medium-up--one-quarter' -%}
         {% when '33%' %}
+          {%- assign max_width = 345 -%}
           {%- assign max_height = 345 -%}
           {%- assign block_width = 'small--one-half medium-up--one-third' -%}
         {% when '50%' %}
+          {%- assign max_width = 530 -%}
           {%- assign max_height = 530 -%}
           {%- assign block_width = 'small--one-half medium-up--one-half' -%}
         {% when '66%' %}
+          {%- assign max_width = 720 -%}
           {%- assign max_height = 720 -%}
           {%- assign block_width = 'two-thirds' -%}
         {% when '75%' %}
+          {%- assign max_width = 810 -%}
           {%- assign max_height = 810 -%}
           {%- assign block_width = 'three-quarters' -%}
         {% when '100%' %}
+          {%- assign max_width = 1090 -%}
           {%- assign max_height = 1090 -%}
           {%- assign block_width = 'one-whole' -%}
       {% endcase %}
@@ -85,7 +91,7 @@
             {% when 'product' %}
               {%- assign product = all_products[block.settings.product] -%}
               {% if product.title.size > 0 %}
-                {% include 'product-card-grid', max_height: max_height %}
+                {% include 'product-card-grid', max_height: max_height, max_width: max_width %}
               {% else %}
                 {% comment %}
                   No product yet. Show onboarding one.

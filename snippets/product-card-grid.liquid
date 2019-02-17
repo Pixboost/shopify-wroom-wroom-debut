@@ -13,14 +13,16 @@
 
   <div id="{{ wrapper_id }}" class="grid-view-item__image-wrapper product-card__image-wrapper js">
     <div style="padding-top:{% unless product.featured_image == blank %}{{ 1 | divided_by: product.featured_image.aspect_ratio | times: 100}}%{% else %}100%{% endunless %};">
-      <img id="{{ img_id }}"
-            class="grid-view-item__image lazyload"
-            src="{{ product.featured_image | img_url: '300x300' }}"
-            data-src="{{ img_url }}"
-            data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
-            data-aspectratio="{{ product.featured_image.aspect_ratio }}"
-            data-sizes="auto"
-            alt="">
+      <div class="grid-view-item__image">
+        <div data-pb-picture 
+          id="{{ img_id }}"
+          data-url="{{ product.featured_image | img_url: 'master' | url_encode }}"
+          data-lazy=""
+          data-lg="resize?size={{max_width}}"
+          data-md="resize?size={{max_width}}"
+          data-sm="resize?size=180"
+        ></div>
+      </div>
     </div>
   </div>
 
