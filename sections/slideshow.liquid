@@ -46,8 +46,7 @@
                    data-bgset="{% include 'bgset', image: block.settings.image %}"
                    data-sizes="auto"
                    data-parent-fit="contain"
-                   style="background-position: {{ block.settings.alignment }};
-                          background-image: url('{{ block.settings.image | img_url: '300x300' }}');">
+                   style="background-position: {{ block.settings.alignment }};">
                 {% if section.settings.show_overlay %}<div class="slideshow__overlay"></div>{% endif %}
               </div>
             {% endif %}
