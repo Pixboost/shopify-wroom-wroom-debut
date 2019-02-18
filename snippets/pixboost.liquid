@@ -1,3 +1,10 @@
 {%- if image != blank -%}
-https://pixboost.com/api/2/img/{{image | img_url: size | url_encode }}/optimise?auth=MTg4MjMxMzM3MA__
+
+    {%- if scale == blank -%}
+        https://pixboost.com/api/2/img/{{image | img_url: size | url_encode }}/optimise?auth=MTg4MjMxMzM3MA__
+    {%- endif -%}
+
+    {%- if scale != blank -%}
+        https://pixboost.com/api/2/img/{{image | img_url: size, scale: scale | url_encode }}/optimise?auth=MTg4MjMxMzM3MA__
+    {%- endif -%}
 {%- endif -%}

@@ -16,21 +16,25 @@
 
   {% case section.settings.image_size %}
     {% when 'small' %}
+      {%- assign product_image_width_pixels = 1120 | divided_by: 3 | minus: 30 -%}
       {%- assign product_image_width = 'medium-up--one-third' -%}
       {%- assign product_description_width = 'medium-up--two-thirds' -%}
       {%- assign product_thumbnail_width = 'medium-up--one-third' -%}
       {%- assign height = 345 -%}
     {% when 'medium' %}
+      {%- assign product_image_width_pixels = 1120 | divided_by: 2 | minus: 30 -%}
       {%- assign product_image_width = 'medium-up--one-half' -%}
       {%- assign product_description_width = 'medium-up--one-half' -%}
       {%- assign product_thumbnail_width = 'medium-up--one-quarter' -%}
       {%- assign height = 530 -%}
     {% when 'large' %}
+      {%- assign product_image_width_pixels = 1120 | divided_by: 3 | times: 2 | minus: 30 -%}
       {%- assign product_image_width = 'medium-up--two-thirds' -%}
       {%- assign product_description_width = 'medium-up--one-third' -%}
       {%- assign product_thumbnail_width = 'medium-up--one-fifth' -%}
       {%- assign height = 720 -%}
     {% when 'full' %}
+      {%- assign product_image_width_pixels = 1120 | minus: 30 -%}
       {%- assign product_image_width = '' -%}
       {%- assign product_description_width = '' -%}
       {%- assign product_thumbnail_width = 'medium-up--one-eighth' -%}
@@ -56,16 +60,15 @@
           style="padding-top:{{ 1 | divided_by: image.aspect_ratio | times: 100}}%;"
           class="product-single__photo{% if enable_zoom %} js-zoom-enabled{% endif %}{% if product.images.size > 1 %} product-single__photo--has-thumbnails{% endif %}{% unless featured_image == image %} hide{% endunless %}"
           data-image-id="{{ image.id }}"
-          {% if enable_zoom %} data-zoom="{{ image | img_url: product_image_zoom_size, scale: product_image_scale }}"{% endif %}>
-            <img id="{{ img_id }}"
-                 class="feature-row__image {{ img_class }} lazyload{% unless featured_image == image %} lazypreload{% endunless %}"
-                 src="{{ image | img_url: '300x300' }}"
-                 data-src="{{ img_url }}"
-                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
-                 data-aspectratio="{{ image.aspect_ratio }}"
-                 data-sizes="auto"
-                 tabindex="-1"
-                 alt="{{ image.alt | escape }}">
+          {% if enable_zoom %} data-zoom="{% include 'pixboost' with image: image, size: product_image_zoom_size, scale: product_image_scale %}"{% endif %}>
+              <img data-pb-image 
+                id="{{ img_id }}"
+                data-src="{{ image | img_url: 'master' | url_encode }}"
+                data-lazy=""
+                data-op="resize?size={{product_image_width_pixels}}"
+                class="feature-row__image {{ img_class }} lazyload{% unless featured_image == image %} lazypreload{% endunless %}"
+                alt="{{ image.alt | escape }}"
+                tabindex="-1"/>
           </div>
         </div>
       {% endfor %}
@@ -94,7 +97,7 @@
                    class="text-link product-single__thumbnail product-single__thumbnail--{{ section.id }}"
                    data-thumbnail-id="{{ image.id }}"
                    {% if enable_zoom %}data-zoom="{{ image.src | img_url: product_image_zoom_size, scale: product_image_scale }}"{% endif %}>
-                     <img class="product-single__thumbnail-image" src="{{ image.src | img_url: '110x110', scale: 2 }}" alt="{{ 'sections.featured_product.gallery_thumbnail_alt' | t: imageAlt: image.alt | escape }}">
+                     <img class="product-single__thumbnail-image" src="{% include 'pixboost' with image: image, size: '110x110', scale: product_image_scale %}" alt="{{ 'sections.featured_product.gallery_thumbnail_alt' | t: imageAlt: image.alt | escape }}">
                 </a>
               </li>
             {% endfor %}
