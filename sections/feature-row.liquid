@@ -8,14 +8,17 @@
         {% include 'image-style' with image: section.settings.image, width: 545, height: 545, small_style: true, wrapper_id: wrapper_id, img_id: img_id %}
         <div id="{{ wrapper_id }}" class="feature-row__image-wrapper js">
           <div style="padding-top:{{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100}}%;">
-            <img id="{{ img_id }}"
-                 class="feature-row__image lazyload"
-                 src="{{ section.settings.image | img_url: '200x200' }}"
-                 data-src="{{ img_url }}"
-                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
-                 data-aspectratio="{{ section.settings.image.aspect_ratio }}"
-                 data-sizes="auto"
-                 alt="{{ section.settings.image.alt | escape }}">
+            <div class="feature-row__image">
+              <div data-pb-picture 
+                id="{{ img_id }}"
+                data-url="{{ section.settings.image | img_url: 'master' | url_encode }}"
+                data-lazy=""
+                data-lg="resize?size=545"
+                data-md="resize?size=545"
+                data-sm="resize?size=400"
+                data-alt="{{ section.settings.image.alt | escape }}"
+              ></div>
+            </div>
           </div>
         </div>
 
