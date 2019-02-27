@@ -14,7 +14,7 @@ Notes:
 
 | Stat                          | Original | Optimised |
 |-------------------------------|----------|-----------| 
-On content load (msec):         | 4120     | 10015
+On content load (msec):         | 4120     | 5230
 On load (msec):                 | 29795    | 17554
 Number of requests:             | 74       | 57
 Total time with queueing (sec): | 504249   | 225380
