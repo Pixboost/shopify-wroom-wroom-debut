@@ -1,10 +1,15 @@
 {%- if image != blank -%}
-
-    {%- if scale == blank -%}
-        https://pixboost.com/api/2/img/{{image | img_url: size | url_encode }}/optimise?auth=MTg4MjMxMzM3MA__
+    {%- if scale == blank and size == blank -%}
+        {%- assign img_url = image | url_encode | replace: '_%7Bwidth%7Dx.', '_{width}x.' -%}
     {%- endif -%}
 
-    {%- if scale != blank -%}
-        https://pixboost.com/api/2/img/{{image | img_url: size, scale: scale | url_encode }}/optimise?auth=MTg4MjMxMzM3MA__
+    {%- if scale == blank and size != blank -%}
+        {%- assign img_url = image | img_url: size | url_encode -%}
     {%- endif -%}
+
+    {%- if size != blank and scale != blank -%}
+        {%- assign img_url = image | img_url: size, scale: scale | url_encode  -%}
+    {%- endif -%}
+
+    https://pixboost.com/api/2/img/{{img_url}}/optimise?auth=MTg4MjMxMzM3MA__
 {%- endif -%}
