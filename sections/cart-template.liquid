@@ -18,7 +18,7 @@
             <tr class="cart__row border-bottom line{{ forloop.index }}{% if forloop.first %} border-top{% endif %}">
               <td class="cart__image-wrapper">
                 <div>
-                  <img class="cart__image" src="{{ item | img_url: '95x95', scale: 2 }}" alt="{{ item.title | escape }}" data-item-url="{{ item.url }}">
+                  <img class="cart__image" src="{% include 'pixboost' with image: item, size: '95x95', scale: 2 %}" alt="{{ item.title | escape }}" data-item-url="{{ item.url }}">
                 </div>
               </td>
               <td class="cart__meta small--text-left">
