@@ -71,7 +71,7 @@
   <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
   <script type="text/javascript" src="https://pixboost.com/libs/pixboost.bundle.min.js"
-            id="pb-script" data-api-key="OTM5Mjk0OTc2" data-autoload=""></script>
+            id="pb-script" data-api-key="{{ settings.api_key }}" data-autoload=""></script>
 
   {{ content_for_header }}
 </head>

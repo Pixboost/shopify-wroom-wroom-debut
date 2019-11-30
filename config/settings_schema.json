@@ -1,11 +1,22 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Debut",
+    "theme_name": "Pixboost-Debut",
     "theme_author": "Shopify",
-    "theme_version": "11.1.1",
-    "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/using-themes\/themes-by-shopify\/debut",
-    "theme_support_url": "https:\/\/support.shopify.com\/"
+    "theme_version": "1.0-11.1.1",
+    "theme_documentation_url": "https:\/\/help.pixboost.com\/shopify",
+    "theme_support_url": "https:\/\/pixboost.com\/"
+  },
+  {
+    "name": "Pixboost",
+    "settings": [
+      {
+        "id": "api_key",
+        "type": "text",
+        "label": "Pixboost API Key",
+        "default": "OTM5Mjk0OTc2"  
+      }
+    ]
   },
   {
     "name": {
