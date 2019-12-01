@@ -11,6 +11,12 @@ I found that using MS Visual Code with this [plugin](https://github.com/GingerBe
 
 # Run
 
+Set your private app password to the environment variable:
+
+```
+export THEMEKIT_PASSWORD=<APP_PASSWORD>
+```
+
 In two terminals:
 
 * To preview changes: `theme open --env=development`
