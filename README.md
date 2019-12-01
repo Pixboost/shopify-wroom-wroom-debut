@@ -26,4 +26,4 @@ In two terminals:
 
 To build release zip:
 
-`zip -r debut-shopify-<VERSION>.zip . -x@package_exclude.lst`
+`zip -r debut-pixboost-<VERSION>.zip . -x@package_exclude.lst`
