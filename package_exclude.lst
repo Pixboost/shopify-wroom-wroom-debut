@@ -1,0 +1,7 @@
+README.md
+config.yml
+performance-reports/*
+LICENSE
+package_exclude.lst
+.git/*
+*.zip

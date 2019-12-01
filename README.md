@@ -21,3 +21,9 @@ In two terminals:
 
 * To preview changes: `theme open --env=development`
 * To watch and upload changes: `theme watch`
+
+# Build
+
+To build release zip:
+
+`zip -r debut-shopify-<VERSION>.zip . -x@package_exclude.lst`
