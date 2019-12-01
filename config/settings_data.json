@@ -67,7 +67,7 @@
         "settings": {
           "image": "shopify:\/\/shop_images\/Front-Of-Red-Car.jpg",
           "alignment": "center",
-          "title": "Find your next car",
+          "title": "Find your next car (hero)",
           "text": "<p>Don't be like everyone. Toyota Prius is eco friendly, but how fast it can go to 100 km\/h? Be unique, be yourself.<\/p>",
           "hero_size": "medium",
           "text_size": "large",
@@ -117,9 +117,9 @@
       "featured-collections": {
         "type": "collection",
         "settings": {
-          "title": "Featured collection",
+          "title": "Featured collection (collection)",
           "collection": "frontpage",
-          "grid": 3,
+          "grid": 5,
           "rows": 2,
           "show_vendor": false,
           "show_view_all": false
@@ -130,7 +130,7 @@
         "settings": {
           "image": "shopify:\/\/shop_images\/91DE_122.jpg",
           "layout": "left",
-          "title": "The Legend",
+          "title": "The Legend (feature-row)",
           "text": "<p>When Ayrton Senna arrived at McLaren in 1988 he was an outstanding young driver, but he wasn&rsquo;t yet the complete champion he would become during his time with the team. At 28 years old he was starting his fifth season in Formula 1 with six wins under his belt; at McLaren he would convert all that promise into three World Drivers&rsquo; Championships.<\/p>",
           "button_label": "McLaren Senna",
           "button_link": "shopify:\/\/products\/mclaren-senna"
@@ -170,13 +170,159 @@
           "color_footer_bg": "#f5f5f5",
           "color_footer_text": "#3d4246"
         }
+      },
+      "1550430739320": {
+        "type": "custom-content",
+        "blocks": {
+          "1550430739320-0": {
+            "type": "text",
+            "settings": {
+              "title": "Buggi Buggi",
+              "text": "<p>Drive away lightning fast Veyron right now!<\/p>",
+              "width": "50%",
+              "alignment": "center",
+              "align_text": "left"
+            }
+          },
+          "1550430756118": {
+            "type": "product",
+            "settings": {
+              "product": "bugatti-veyron",
+              "width": "50%",
+              "alignment": "center"
+            }
+          }
+        },
+        "block_order": [
+          "1550430739320-0",
+          "1550430756118"
+        ],
+        "settings": {
+          "title": "Buggi Buggi (custom-content with product)"
+        }
+      },
+      "1558477797581": {
+        "type": "custom-content",
+        "blocks": {
+          "1558477797581-0": {
+            "type": "text",
+            "settings": {
+              "title": "The Fastest",
+              "text": "<p>Speed:&nbsp;447.19&nbsp;km\/h&nbsp;<\/p>\n<p><\/p>\n<p>At the&nbsp;<a href=\"https:\/\/en.wikipedia.org\/wiki\/Geneva_Motor_Show#2016\" title=\"Geneva Motor Show\">2016 Geneva Motor Show<\/a>, a final three-car series of the Agera was announced as a final celebration of the Agera range and as the last models to wear the Agera badge. The cars could be fully customised and combined the Agera RS chassis with the One:1 engine. The first car to be unveiled was called the 'One of One'. It featured a unique orange paint scheme with bare carbon and blue accents. The exterior of the car was complemented with a large adjustable rear wing from the One:1 and triple front canards along with a large front splitter.<\/p>",
+              "width": "50%",
+              "alignment": "center",
+              "align_text": "left"
+            }
+          },
+          "1558477797581-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/1920px-2015_Koenigsegg_Agera_N__19886243212.jpg",
+              "width": "50%",
+              "alignment": "center"
+            }
+          }
+        },
+        "block_order": [
+          "1558477797581-0",
+          "1558477797581-1"
+        ],
+        "settings": {
+          "title": "Did you know? (custom-content with image)"
+        }
+      },
+      "1558480587827": {
+        "type": "feature-columns",
+        "blocks": {
+          "1558480587827-0": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/red-car-1.jpg",
+              "title": "1969 Jaguar E-Type Coupe",
+              "text": "<p>The Jaguar E-Type is a stunning piece of work in any color, but when painted bright red (in either coupe or convertible form), they're pretty hard to not love. This example is fairly well-priced, considering it has recently undergone a comprehensive restoration.<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "1558480587827-1": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/red-car-2.jpg",
+              "title": "1970 Chevrolet Corvette Convertible",
+              "text": "<p>This screaming-red Corvette is a great example of a car that has zero ability to fly under the radar. The bright red convertible was one of the top poster cars of an entire generation, and this era of Corvette remains quite collectible. Adding to its desirability, this particular 'Vette comes with a factory hardtop and a 4-speed manual gearbox.<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "1558480587827-2": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/red-car-3.jpg",
+              "title": "1988 Porsche 911 Turbo Custom",
+              "text": "<p>Given the high value of so many '80s 911s now, we suspect that the body modification on this mean 911 Turbo is actually holding it back a little. The details are spotty on this one, but it's definitely gotten a healthy dose of aftermarket upgrades &mdash; including a bigger intercooler, custom exhaust, racing seats, and a roll cage. This would be a good one to scoop up for track days and slowly convert back to a factory-original exterior package.<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1558480587827-0",
+          "1558480587827-1",
+          "1558480587827-2"
+        ],
+        "settings": {
+          "title": "Best in Red (feature-columns)",
+          "align_text": "left"
+        }
+      },
+      "1558482265079": {
+        "type": "featured-blog",
+        "settings": {
+          "title": "Blog posts (featured-blog)",
+          "blog": "news",
+          "post_limit": 3,
+          "blog_show_author": false,
+          "blog_show_date": true,
+          "show_view_all": false
+        }
+      },
+      "1558645865324": {
+        "type": "featured-product",
+        "settings": {
+          "featured_product": "ferrari-812-superfast",
+          "image_size": "medium",
+          "show_quantity_selector": false,
+          "show_variant_labels": true,
+          "show_vendor": false,
+          "enable_zoom": true,
+          "enable_payment_button": true,
+          "show_share_buttons": true
+        }
+      },
+      "1558645980999": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": false,
+          "section_title": "featured-product",
+          "text": "",
+          "text_size": "medium"
+        }
       }
     },
     "content_for_index": [
       "hero",
       "featured-collections",
       "feature-row",
-      "slideshow"
+      "1550430739320",
+      "1558645980999",
+      "1558645865324",
+      "1558477797581",
+      "1558480587827",
+      "slideshow",
+      "1558482265079"
     ]
   },
   "presets": {
@@ -206,7 +352,8 @@
       "sections": {
         "header": {
           "type": "header",
-          "settings": {}
+          "settings": {
+          }
         },
         "hero": {
           "type": "hero",
@@ -219,18 +366,21 @@
           "blocks": {
             "slideshow-0": {
               "type": "image",
-              "settings": {}
+              "settings": {
+              }
             },
             "slideshow-1": {
               "type": "image",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
             "slideshow-0",
             "slideshow-1"
           ],
-          "settings": {}
+          "settings": {
+          }
         },
         "featured-collections": {
           "type": "collection",
@@ -240,22 +390,26 @@
         },
         "feature-row": {
           "type": "feature-row",
-          "settings": {}
+          "settings": {
+          }
         },
         "footer": {
           "type": "footer",
           "blocks": {
             "link_list": {
               "type": "link_list",
-              "settings": {}
+              "settings": {
+              }
             },
             "text": {
               "type": "text",
-              "settings": {}
+              "settings": {
+              }
             },
             "newsletter": {
               "type": "newsletter",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
@@ -263,7 +417,8 @@
             "text",
             "newsletter"
           ],
-          "settings": {}
+          "settings": {
+          }
         }
       },
       "content_for_index": [
@@ -403,20 +558,23 @@
         },
         "1492033809691": {
           "type": "map",
-          "settings": {}
+          "settings": {
+          }
         },
         "1492033877875": {
           "type": "quotes",
           "blocks": {
             "1492033877875-0": {
               "type": "quote",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
             "1492033877875-0"
           ],
-          "settings": {}
+          "settings": {
+          }
         },
         "1492033924902": {
           "type": "custom-content",
@@ -442,15 +600,18 @@
           "blocks": {
             "1492096252560-0": {
               "type": "featured_collection",
-              "settings": {}
+              "settings": {
+              }
             },
             "1492096252560-1": {
               "type": "featured_collection",
-              "settings": {}
+              "settings": {
+              }
             },
             "1492096252560-2": {
               "type": "featured_collection",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
@@ -489,15 +650,18 @@
           "blocks": {
             "link_list": {
               "type": "link_list",
-              "settings": {}
+              "settings": {
+              }
             },
             "text": {
               "type": "text",
-              "settings": {}
+              "settings": {
+              }
             },
             "newsletter": {
               "type": "newsletter",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
@@ -505,7 +669,8 @@
             "text",
             "newsletter"
           ],
-          "settings": {}
+          "settings": {
+          }
         }
       },
       "content_for_index": [
