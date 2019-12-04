@@ -1,8 +1,8 @@
 # shopify-wroom-wroom-debut
-Shopify [Debut](https://wroomwroom.myshopify.com/?preview_theme_id=33132314679) theme integrated with Pixboost Image CDN.
+Shopify [Debut](https://wroomwroom.myshopify.com/?preview_theme_id=33132314679) theme integrated with [Pixboost Image CDN](https://pixboost.com).
 
-The main purpose of using Pixboost Image CDN is to improve the performance of a Shopify store. You could find performance result
-comparing with original Debut theme here:
+The main purpose of using Pixboost Image CDN is to improve the performance of a Shopify store. The performance results
+compared to the original Debut theme here:
 
 * [Homepage](./performance-reports/homepage/README.md)
 * [Product Page](./performance-reports/product-page/README.md)
@@ -13,7 +13,7 @@ We wrote a blog about integrating techniques and performance results [here](http
 
 # Installation
 
-To install the them on your Shopify store, please follow the instruction from our [help](https://help.pixboost.com/shopify#installation).
+To install the theme on your Shopify store, please follow the instruction from our [help](https://help.pixboost.com/shopify#installation).
 
 # Developing
 
@@ -38,4 +38,4 @@ In two terminals:
 
 * To build a release zip
     `zip -r debut-pixboost-<VERSION>.zip . -x@package_exclude.lst`
-* Create a new release in github and attach a zip created in the above step
+* Create a new release in GitHub and attach a zip created in the above step
