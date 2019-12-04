@@ -5,3 +5,4 @@ LICENSE
 package_exclude.lst
 .git/*
 *.zip
+.DS_Store
