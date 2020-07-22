@@ -7,7 +7,7 @@ compared to the original Debut theme here:
 * [Homepage](./performance-reports/homepage/README.md)
 * [Product Page](./performance-reports/product-page/README.md)
 
-Demo store: [wroom-wroom.myshopify.com](wroom-wroom.myshopify.com)
+Demo store: [wroomwroom.myshopify.com](https://wroomwroom.myshopify.com)
 
 We wrote a blog about integrating techniques and performance results [here](https://medium.com/pixboost/boosting-image-performance-of-your-shopify-store-d3696ac71f93?source=github).
 
